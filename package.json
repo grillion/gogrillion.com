@@ -1,0 +1,11 @@
+{
+  "name": "gogrillion.com",
+  "version": "1.0.0",
+  "description": "GoGrillion.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grillion/gogrillion.com.git"
+  },
+  "author": "Michael Grill",
+  "homepage": "http://www.gogrillion.com"
+}
