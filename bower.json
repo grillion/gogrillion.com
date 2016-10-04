@@ -1,17 +1,29 @@
 {
   "name": "gogrillion.com",
   "description": "GoGrillion.com",
+  "main": "",
   "authors": [
-    "Michael Grill <mgrill@ikanow.com>"
+    "Michael Grill"
   ],
+  "license": "MIT",
+  "homepage": "https://github.com/grillion/gogrillion.com",
+  "moduleType": [],
   "private": true,
-  "license": "ISC",
-  "homepage": "www.gogrillion.com",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "devDependencies": {
+    "bootstrap": "^3.3.7"
+  },
+  "exportsOverride": {
+    "bootstrap": [
+      "less",
+      "fonts",
+      "dist"
+    ]
+  }
 }
