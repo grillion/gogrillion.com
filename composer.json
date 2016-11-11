@@ -1,0 +1,12 @@
+{
+  "name": "gogrillion/www",
+  "description": "GoGrillion.com Homepage Backend",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Mike Grill",
+      "email": "mike@gogrillion.com"
+    }
+  ]
+}
