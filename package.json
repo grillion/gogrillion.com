@@ -2,21 +2,40 @@
   "name": "gogrillion.com",
   "version": "1.0.0",
   "description": "GoGrillion.com",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/grillion/gogrillion.com.git"
   },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "mocha"
+  },
   "author": "Michael Grill",
   "homepage": "http://www.gogrillion.com",
-  "dependencies": {},
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-ui-bootstrap": "^2.5.0",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1"
+  },
+  "bundledDependencies": [
+    "angular",
+    "angular-ui-bootstrap",
+    "bootstrap",
+    "jquery"
+  ],
   "devDependencies": {
-    "bower": "^1.7.9",
     "fs-extra": "^0.30.0",
     "grunt": "^1.0.1",
     "grunt-contrib-connect": "^1.0.2",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-jshint": "^1.0.0",
     "grunt-contrib-less": "^1.4.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "mocha": "^3.3.0",
     "q": "^1.4.1"
   }
 }
