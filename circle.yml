@@ -4,7 +4,14 @@ dependencies:
   cache_directories:
     - ~/.npm
   override:
-    - nvm install 6 && npm install && grunt release
-general:
-  artifacts:
-    - "public" # relative to the build directory
+    - nvm install 6 && npm install
+
+#general:
+#  artifacts:
+#    - "public" # relative to the build directory
+
+compile:
+  override:
+    - grunt release
+  post:
+    - mv public $CIRCLE_ARTIFACTS/
