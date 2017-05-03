@@ -1,0 +1,7 @@
+dependencies:
+  pre:
+    - rm -rf ./node_modules
+  cache_directories:
+    - ~/.npm
+  override:
+    - nvm install 6 && npm install
