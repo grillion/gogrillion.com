@@ -5,3 +5,6 @@ dependencies:
     - ~/.npm
   override:
     - nvm install 6 && npm install && grunt release
+general:
+  artifacts:
+    - "public" # relative to the build directory

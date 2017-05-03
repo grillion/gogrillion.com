@@ -84,3 +84,5 @@ crashlytics-build.properties
 fabric.properties
 
 /bower_components/
+/public/js/
+/public/css/
