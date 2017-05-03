@@ -13,5 +13,7 @@ dependencies:
 compile:
   override:
     - grunt release
+
+test:
   post:
     - mv public $CIRCLE_ARTIFACTS/
