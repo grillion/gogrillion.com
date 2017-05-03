@@ -51,4 +51,8 @@ module.exports = function(grunt) {
     'connect:dev',
     'watch:dev'
   ]);
+
+  grunt.registerTask('release', [
+    'less'
+  ])
 };

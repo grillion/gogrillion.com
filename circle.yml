@@ -4,4 +4,4 @@ dependencies:
   cache_directories:
     - ~/.npm
   override:
-    - nvm install 6 && npm install
+    - nvm install 6 && npm install && grunt release
