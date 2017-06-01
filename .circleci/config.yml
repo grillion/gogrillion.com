@@ -8,15 +8,16 @@ jobs:
       - checkout
       - run:
           name: 'Install Node Packages'
-          command: |
-            npm install
-            node node_modules/grunt/bin/grunt release
+          command: npm install
+      - run:
+          name: 'Build release'
+          command: npm build
       - deploy:
           name: 'Deploy to S3'
           command: |
-            if [ "${CIRCLE_BRANCH}" === "master" ]; then
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
               aws s3 sync public s3://production.gogrillion.com --delete
             fi
-            if [ "${CIRCLE_BRANCH}" === "development" ]; then
+            if [ "${CIRCLE_BRANCH}" == "development" ]; then
               aws s3 sync public s3://staging.gogrillion.com --delete
             fi
