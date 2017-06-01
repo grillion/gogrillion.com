@@ -3,24 +3,14 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
 
-    copy: {
-      bootstrapFonts: {
-        expand: true,
-        cwd: "public/plugin/bootstrap/fonts/",
-        src: "*",
-        dest: "public/fonts/"
-      }
-    },
-
     //Development HTTP Server, HTTP Proxy, and live reload
     connect: {
       dev: {
         options: {
           debug: true,
-          keepalive: true,
           open: true,
           base: {
-            path: 'public/',
+            path: 'src/',
             options: {
               index: 'index.html'
             }
@@ -36,17 +26,33 @@ module.exports = function(grunt) {
           'public/css/app.css': 'public/less/app.less'
         }
       }
+    },
+
+    watch:{
+      dev:{
+        files: [ 'src/**/*.*' ],
+        tasks: [ 'less' ],
+        options: {
+          livereload: true
+        }
+      }
     }
+
+
   });
 
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-less');
-  grunt.loadTasks('tasks');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('dev', [
-    'copy:bootstrapFonts',
     'less',
-    'connect:dev'
+    'connect:dev',
+    'watch:dev'
   ]);
+
+  grunt.registerTask('compile', [
+    'less'
+  ])
 };

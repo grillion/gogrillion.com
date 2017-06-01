@@ -1,0 +1,23 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/gogrillion.com
+    docker:
+      - image: circleci/node:4.8.2
+    steps:
+      - checkout
+      - run:
+          name: 'Install Node Packages'
+          command: npm install
+      - run:
+          name: 'Build release'
+          command: npm run-script compile
+      - deploy:
+          name: 'Deploy to S3'
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              aws s3 sync public s3://production.gogrillion.com --delete
+            fi
+            if [ "${CIRCLE_BRANCH}" == "development" ]; then
+              aws s3 sync public s3://staging.gogrillion.com --delete
+            fi
