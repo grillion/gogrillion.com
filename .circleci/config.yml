@@ -2,8 +2,6 @@ version: 2
 jobs:
   build:
     working_directory: ~/gogrillion.com
-    docker:
-      - image: circleci/node:4.8.2
     steps:
       - checkout
       - run:
