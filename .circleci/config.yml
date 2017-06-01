@@ -7,6 +7,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: 'Install AWS CLI'
+          command: pip install awscli
+      - run:
           name: 'Install Node Packages'
           command: npm install
       - run:
