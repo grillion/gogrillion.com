@@ -9,6 +9,7 @@ jobs:
       - run:
           name: 'Install Node Packages'
           command: |
+            npm install -g gulp
             npm install
             grunt release
       - deploy:
