@@ -10,12 +10,9 @@ jobs:
         name: install-node-packages
         command: |
           npm install
-          grunt less
-      - run:
-        name: compile-css
-        command: 'grunt release'
+          grunt release
       - deploy:
-        name: 'Deploy to S3'
+        name: Deploy to S3
         command: |
           if [ "${CIRCLE_BRANCH}" === "master" ]; then
             aws s3 sync public s3://production.gogrillion.com --delete
