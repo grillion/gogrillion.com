@@ -23,7 +23,7 @@ module.exports = function(grunt) {
     less: {
       gui: {
         files: {
-          'src/css/app.css': 'src/less/app.less'
+          'public/css/app.css': 'public/less/app.less'
         }
       }
     },
@@ -52,7 +52,7 @@ module.exports = function(grunt) {
     'watch:dev'
   ]);
 
-  grunt.registerTask('release', [
+  grunt.registerTask('compile', [
     'less'
   ])
 };

@@ -11,7 +11,7 @@ jobs:
           command: npm install
       - run:
           name: 'Build release'
-          command: npm build
+          command: npm run-script compile
       - deploy:
           name: 'Deploy to S3'
           command: |

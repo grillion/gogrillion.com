@@ -11,7 +11,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "node node_modules/grunt/bin/grunt release",
+    "compile": "node node_modules/grunt/bin/grunt compile",
     "test": "mocha"
   },
   "author": "Michael Grill",
