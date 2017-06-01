@@ -3,18 +3,18 @@ jobs:
   build:
     working_directory: ~/gogrillion.com
     docker:
-      image: circleci/node:4.8.2
+      - image: circleci/node:4.8.2
     steps:
-      checkout:
-      run:
+      - checkout:
+      - run:
         name: install-node-packages
         command: |
           npm install
           grunt less
-      run:
+      - run:
         name: compile-css
         command: 'grunt release'
-      deploy:
+      - deploy:
         name: 'Deploy to S3'
         command: |
           if [ "${CIRCLE_BRANCH}" === "master" ]; then
