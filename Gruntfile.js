@@ -10,7 +10,7 @@ module.exports = function(grunt) {
           debug: true,
           open: true,
           base: {
-            path: 'src/',
+            path: 'public/',
             options: {
               index: 'index.html'
             }
@@ -30,7 +30,7 @@ module.exports = function(grunt) {
 
     watch:{
       dev:{
-        files: [ 'src/**/*.*' ],
+        files: [ 'public/less/**/*' ],
         tasks: [ 'less' ],
         options: {
           livereload: true

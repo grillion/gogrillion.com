@@ -1,0 +1,78 @@
+.resume{
+
+  .center{
+    margin:0 auto;
+    max-width: 700px;
+  }
+
+  .header{
+    background-color: @gogrillion-color-black;
+    color: @gogrillion-color-green;
+    padding: 14px;
+    img{
+      height:60px;
+    }
+  }
+
+  .flexColumns{
+    display: flex;
+  }
+
+  .body{
+    color: @gogrillion-color-gray;
+
+    .section{
+      .title{
+        text-transform: uppercase;
+        color: black;
+        font-size: @gogrillion-section-font-size;
+      }
+
+      .content{
+        padding-left:1em;
+        margin-left:1em;
+        border-left:1px solid @gogrillion-color-green;
+
+        .column{
+          flex:1;
+          padding: 10px;
+        }
+        h3{ margin: 0; }
+      }
+
+    }
+  }
+
+  .discipline p span{
+    text-decoration: underline;
+  }
+
+  .employmentItem{
+    padding-bottom: 1em;
+    display:    flex;
+    font-size: @gogrillion-position-font-size;
+    .employer{
+      flex: 1;
+      padding: 0 10px 0 0;
+
+      span{ display: block; }
+      .name{
+        font-size: @gogrillion-item-name-font-size;
+        font-family: ITCFranklinGothic-Demi, sans-serif;
+      }
+      .position{
+        font-family: ITCFranklinGothic-Medium, sans-serif;
+      }
+      .dates{
+        font-family: ITCFranklinGothic-Book, sans-serif;
+        font-style: italic;
+      }
+    }
+    .tasks{
+      flex:4.5;
+
+    }
+  }
+
+
+}

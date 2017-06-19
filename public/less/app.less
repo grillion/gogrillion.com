@@ -1,11 +1,15 @@
 @import "../plugin/bootstrap/less/bootstrap";
 
+@import "fonts";
 @import "global";
+@import "resume";
 
-body{
-  background-color: @gogrillion-body-bg;
+body, html{
+  background-color: white;
+  color: @gogrillion-color-black;
+  font-family: @gogrillion-default-font-family;
 }
 
-#logoRow{
-  margin-top:100px;
+h1, h2, h3, h4, h5, h6{
+  font-family: ITCFranklinGothic-Demi, sans-serif;
 }
